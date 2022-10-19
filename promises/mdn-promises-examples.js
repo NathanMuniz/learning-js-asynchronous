@@ -1,9 +1,9 @@
-fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json')
+fecthPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json')
 
-console.log(fetchPromise);
+console.log(fetchPromise); // Promise { <state>: "pending" }
 
 fetchPromise.then((response) => {
-  console.log(`Reponse status: ${response.status} `);
+  console.log(`Response status: ${response.status}`)
 });
 
-
+console.log("Started request...");
