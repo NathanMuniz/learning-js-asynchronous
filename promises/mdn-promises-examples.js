@@ -68,7 +68,7 @@ fetchPromise
 
 // Catching errors 
 
-/*
+
 const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
@@ -82,11 +82,15 @@ fetchPromise
     console.log(data[0].name);
   })
   .catch((error) => {
-    console.error(`Could not get products: ${err or}`);
+    console.error(`Could not get products: ${error}`);
   });
 
-*/
+console.log("waiting")
 
+
+
+
+/*
 // Async and Await 
 async function fetchProducts() {
   try {
@@ -94,7 +98,7 @@ async function fetchProducts() {
     // the `fetch()` call will either return a Response or throw an error
     const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
     if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+      throw new Error(`HTTP error: ${ response.status }`);
     }
     // after this line, our function will wait for the `response.json()` call to be settled
     // the `response.json()` call will either return the parsed JSON object or throw an error
@@ -102,9 +106,9 @@ async function fetchProducts() {
     console.log(data[0].name);
   }
   catch (error) {
-    console.error(`Could not get products: ${error}`);
+    console.error(`Could not get products: ${ error }`);
   }
 }
 
 fetchProducts();
-
+*/
